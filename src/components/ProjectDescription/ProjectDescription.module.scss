@@ -1,0 +1,110 @@
+.projectDescription {
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 800px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Эффект увеличения контейнера при наведении */
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Анимация плавного появления */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.2s forwards;
+  }
+
+  .text {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.4s forwards;
+    font-family: 'Roboto', sans-serif;
+    max-width: 600px;
+  }
+
+  .button {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #45a049;
+    }
+
+    &:active {
+      background-color: #388e3c;
+    }
+  }
+
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    padding: 20px;
+    max-width: 100%;
+    margin: 20px 10px;
+    .title {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    .text {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .button {
+      width: 100%;
+      padding: 12px 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title {
+      font-size: 24px;
+    }
+    .text {
+      font-size: 14px;
+    }
+    .button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+}

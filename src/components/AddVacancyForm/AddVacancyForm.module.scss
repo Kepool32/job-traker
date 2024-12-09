@@ -1,0 +1,160 @@
+.addVacancyForm {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 200px;
+    padding-top: 10px;
+  }
+
+  input {
+    min-height: 45px;
+  }
+}
+
+.submitButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  position: relative;
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modalOverlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalOverlay.open .modalContent {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+
+  &:hover {
+    color: #333;
+  }
+}
+
+@media (max-width: 600px) {
+  .addVacancyForm {
+    width: 90%;
+    padding: 15px;
+    box-shadow: none; /* Убираем тень на маленьких экранах */
+  }
+
+  .formGroup {
+    margin-bottom: 15px;
+  }
+
+  .submitButton {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .error {
+    font-size: 11px;
+  }
+
+  .modalContent {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": "./src",  // Это указывает, что пути считаются от папки src
+    "paths": {
+      "@components/*": ["components/*"],
+      "@assets/*": ["assets/*"],
+      "@hooks/*": ["hooks/*"],
+      "@pages/*": ["pages/*"],
+      "@services/*": ["services/*"],
+      "@validation/*": ["validation/*"],  // Добавляем алиас для validation
+      "@store/*": ["store/*"],            // Добавляем алиас для store
+      "@api/*": ["api/*"],
+      "@types/*": ["types/*"]
+    }
+  }
+}
