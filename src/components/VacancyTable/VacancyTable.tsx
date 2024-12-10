@@ -43,7 +43,7 @@ const VacancyTable: React.FC<VacancyTableProps> = ({ vacancies, onEdit, onDelete
                 <tr>
                     <th>Компания</th>
                     <th>Должность</th>
-                    <th>Зарплата</th>
+                    <th>Зарплата $</th>
                     <th>Статус</th>
                     <th>Примечание</th>
                     <th className={styles.actionsColumn}>Действия</th>
